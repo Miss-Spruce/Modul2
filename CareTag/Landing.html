@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>test</title>
+    <title>The CareTag</title>
     
 <style>
 	*{
@@ -12,6 +12,7 @@
     list-style-type: none; /* Styled in normalize.css */
     text-decoration: none;
     color: black;
+    font-family: Verdana; 
 	}
 body{
     background-color: #FFFFCC;
@@ -91,7 +92,7 @@ body{
 /* Style and animate the nav overlay */
 .main-nav-list::before,
 .main-nav-list::after{
-    background-color:#FFFFCC;
+    background-color: blue;
     content:"";
     position: absolute;
     top: 0;
@@ -125,9 +126,6 @@ body{
     text-transform: uppercase;
     transition-delay: 130ms;
 }
-.main-nav-list .mobile-hide{/* skjuler element på telefon */
-    display: none;
-}
 /*stil på elementet når det er aktivt*/
 .masthead.active h1{
     text-shadow: 0px 3px 3px rgb(0,0,0,.4);
@@ -140,7 +138,7 @@ body{
 .menu-toggle.active .two{
     background-color: transparent;
     box-shadow: none;
-    transform: translateX(-55px);
+    transform: translate(-55px);
 }
 .menu-toggle.active .three{
     box-shadow: 0px 3px 13px #CC6633;
@@ -160,12 +158,18 @@ body{
     transition-timing-function: cubic-bezier(.1, .2, .3, 1.4);
 }
 .main-nav-list.active a{
+
     transition-delay: 600ms;
     opacity: 1;
 }
 /*skjuler det under siden som kommer opp*/
 .wrapper.active p{
      color: #003333;
+               transition-delay: 150ms;
+     transition-duration: 350ms;
+}
+.wrapper.active h1{
+     color: transparent;
                transition-delay: 150ms;
      transition-duration: 350ms;
 }
@@ -183,14 +187,19 @@ button {
     margin: 4px 2px;
     cursor: pointer;
 }
-
+pre {
+    font-size: 15px;
+}
+h1 {
+    font-size: 30px;
+}
 </style> </head>
 <body> 
 <div class="wrapper active-element">
 <header class="main-header">
 <nav>
 <div class="masthead active-element">
-<h1><a href="#0">The CareTag</a></h1>
+<h1>The CareTag</h1> 
 <div id="menu-toggle" class="menu-toggle active-element">
 <div class="one"></div>
 <div class="two"></div>
@@ -198,9 +207,9 @@ button {
 </div></div>
  <div class="main-nav-list active-element">
   <ul>
-       <li><a href="#">a</a></li>
-       <li><a href="#">b</a></li>
-       <li><a href="#">Tull.no</a></li>
+       <li><a href="https://www.rodekorsforstehjelp.no/rad-og-informasjon/instruksjonsvideoer/">Instruksjonsvideoer om førstehjelp</a></li>
+       <li><a href="https://helsenorge.no/forstehjelp-og-skader/hjerte-og-lungeredning">Hjerte-og-lungeredning</a></li>
+       <li><a href="#">Om The CareTag</a></li>
 </ul>
 </div>
 
@@ -213,14 +222,14 @@ button {
 
 
 <br />
-<p> (ProfilBilde) 
-</p>
+<img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sb2074f67f329c396/image/i92f71c570286c32c/version/1550925210/image.jpg" alt="profilbilde">
+
 <pre>
- Navn:
+ Navn: Pernille 
 
- Fødselsdato:
+ Fødselsdato: 17.07.2015
 
- Pårørende:
+ Pårørende: +47 9113399
 </pre>
 <br />
 <button type="button" onclick="alert('Ringer 113')">Ring 113</button>
