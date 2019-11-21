@@ -85,7 +85,7 @@ body{
     top: 0;
     height: 100vh;
     width: 0vw;
-    transition: all 100ms ease-in-out 300ms;
+    transition: all 100ms ease-in-out 150ms;
 }
 .main-nav-list::before{
     left: 0;
@@ -99,7 +99,7 @@ body{
     top: -30%;
     left: 50%;
     transform: translate(-50%,-50%);
-    transition-duration: 300ms;
+    transition-duration: 100ms;
     transition-timing-function: ease-in-out;
     z-index: 2000;
 }
@@ -111,7 +111,7 @@ body{
     opacity: 0;
     text-align: center;
     text-transform: uppercase;
-    transition-delay: 130ms;
+    transition-delay: 100ms;
 }
 
 /*disse tre blir fra en meny knapp til et kryss*/
@@ -146,10 +146,26 @@ body{
     opacity: 1;
 }
 /*skjuler det under siden som kommer opp*/
- .wrapper.active h1{
-     color: transparent;
-               transition-delay: 150ms;
-     transition-duration: 350ms;
+.wrapper.active h1{
+    color: transparent;
+    transition-delay: 150ms;
+    transition-duration: 350ms;
+}
+.wrapper.active pre {
+    color: transparent;
+    transition-delay: 150ms;
+    transition-duration: 350ms;
+}
+.wrapper.active img {
+    display: block;
+    opacity: 0.0;
+    transition-delay: 150ms;
+    transition-duration: 350ms;
+}
+.wrapper.active button {
+    opacity: 0.0;
+    transition-delay: 150ms;
+    transition-duration: 350ms;
 }
 button {
     font-size: 60px;
